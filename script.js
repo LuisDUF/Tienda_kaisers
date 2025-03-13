@@ -1,3 +1,5 @@
+
+function listar_pianos(a){
 const instrumentos = {
     piano: [
         {name:"Grand piano", color:"Negro", cantidad: 4, precio: 1000000},
@@ -15,3 +17,9 @@ const instrumentos = {
         {name:"Pan", color: "Cafe", cantidad: 3, precio: 500}
       ]
 };
+
+document.getElementById("cantidad").innerHTML = instrumentos.piano[a].cantidad;
+document.getElementById("nombre").innerHTML = instrumentos.piano[a].name;
+document.getElementById("precio").innerHTML = instrumentos.piano[a].precio;
+
+}
