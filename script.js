@@ -1,5 +1,5 @@
 
-function listar_pianos(a){
+
 const instrumentos = {
     piano: [
         {name:"Grand piano", color:"Negro", cantidad: 4, precio: 1000000},
@@ -18,7 +18,22 @@ const instrumentos = {
       ]
 };
 
-document.getElementById("cantidad").innerHTML = instrumentos.piano[a].cantidad;
+function listar_pianos(a){
+    const tbody = document.getElementById("cantidad");
+
+    instrumentos.forEach(instrumento => {
+        let fila = document.createElement("tr");
+
+        fila.innerHTML = `
+        <td>${piano.name}</td>
+        <td>${piano.cantidad}</td>
+        <td>${piano.precio}</td>
+        `;
+        tbody.appendChild(fila);
+    })
+
+    
+
 document.getElementById("nombre").innerHTML = instrumentos.piano[a].name;
 document.getElementById("precio").innerHTML = instrumentos.piano[a].precio;
 
