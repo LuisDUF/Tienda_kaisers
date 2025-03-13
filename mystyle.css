@@ -1,12 +1,171 @@
+@font-face {
+    font-family: 'JO';
+    src: url('JosefinSlab-Italic-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'JON';
+    src: url('JosefinSlab-VariableFont_wght.ttf') format('truetype');
+}
+
+header{
+    text-align: center;
+    padding: 1%;
+    background-color: rgb(233, 198, 0);
+    color: rgb(67, 58, 6);;
+    font-style: italic;
+    font-size: 5vw;
+    font-family: 'JO';
+    border: solid rgb(67, 58, 6) 5px;
+    border-bottom: 0;
+    border-radius: 5px;
+    border-bottom-right-radius:0 ;
+    border-bottom-left-radius:0 ;
+
+}
+
 body{
-    background-color: white
+    background-color: black;
+}
+
+nav{
+    background-color: rgb(41, 40, 40);
+    border-radius: 5px;
+    font-size: 1vw;
+    border-top: 0;
+
+}
+
+nav ul{
+    padding: 20px;
+    border-radius: 5px;
+    border-top-left-radius:0 ;
+    border-top-right-radius:0 ;
+    border: solid rgb(67, 58, 6) 5px;
+    border-top: 0;
+    list-style-type: none;
+    
+    margin: 0;
+   
+    padding: 10px;
+    overflow: hidden;
+    background-color: rgb(99, 75, 14);
+}
+
+nav li{
+    float: left;
+    
+}
+
+nav li a{
+    border-radius: 10px;
+    
+   
+    margin: auto;
+    display: block;
+    color: gold;
+    text-align: center;
+    padding: 16px;
+    font-family: 'JON';
+}
+
+nav Li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: gold;
+    transform: scale(1.5);
+    transition: 1.3s;
+}
+
+.carro{
+    float:right;
+}
+
+section{
+    text-align: center;
+   
+    padding-bottom: 5px;
+}
+
+section p{
+    color: gold;
+    text-align: center;
+    font-family: 'jo';
+    font-size: 4vw; 
+    margin-top: 5%;
+
+    
 }
 
 table{
-    border: solid gold;
+ 
+    color: gold;
+    
+    padding-bottom: 6%;
+    font-family: 'JON';
+    
+   margin-left: 15%;
 }
 
-td{
-    color: goldenrod;
+td, tr{
+    padding: 30px;
+    border: solid rgb(99, 75, 14);
+    vertical-align: top;
 }
 
+th{
+    
+    margin:50px;
+    
+    border: solid rgb(99, 75, 14);
+}
+
+img{
+    width: 300PX;
+    height: auto;
+    margin-left: 0%;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+img:hover{
+    transform: scale(2.5);
+  
+}
+
+.pi1{
+    width: 70%;
+    background-image: url(piano.avif) ;
+    background-size:  135%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 15%;
+}
+
+footer{
+    background-color: rgb(99, 75, 14);
+    color: gold;
+    padding: 30px;
+    overflow: hidden;
+    margin: 0;
+    border: solid rgb(67, 58, 6) 5px;
+    border-radius: 5px;
+}
+
+footer a{
+    margin-left: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 10%;
+}
+
+footer a:visited{
+    color: gold;
+}
+
+footer a:hover{
+    background-color: gold;
+    color:  rgb(99, 75, 14);;
+}
+
+a:link{
+    color: gold
+}
