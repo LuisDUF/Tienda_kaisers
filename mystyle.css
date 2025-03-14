@@ -13,7 +13,7 @@ header{
     background-color: rgb(233, 198, 0);
     color: rgb(67, 58, 6);;
     font-style: italic;
-    font-size: 5vw;
+    font-size: 5vMAX;
     font-family: 'JO';
     border: solid rgb(67, 58, 6) 5px;
     border-bottom: 0;
@@ -36,7 +36,7 @@ nav{
 }
 
 nav ul{
-    padding: 20px;
+
     border-radius: 5px;
     border-top-left-radius:0 ;
     border-top-right-radius:0 ;
@@ -46,14 +46,18 @@ nav ul{
     
     margin: 0;
    
-    padding: 10px;
+    padding: 1vmax;
+    padding-bottom: 0vmax;
     overflow: hidden;
     background-color: rgb(99, 75, 14);
 }
 
 nav li{
     float: left;
-    
+    padding-right: 1%;
+    padding-left: 3%;
+    font-size: 1.5vmax;
+    padding-bottom: 0%;
 }
 
 nav li a{
@@ -65,7 +69,29 @@ nav li a{
     color: gold;
     text-align: center;
     padding: 16px;
+    
     font-family: 'JON';
+}
+
+.menu{
+    border-radius: 10px;
+    float: right;
+    margin: auto;
+    padding-bottom: 0%;
+    font-size: 3vmax;
+    color: gold;
+    text-align: center;
+    padding: 16px;
+    padding-bottom: 0%;
+    display: none;
+    font-family: 'JON';
+}
+
+.menu:hover{
+    color: rgb(0, 0, 0);
+    background-color: gold;
+    transform: scale(1.5);
+    transition: 1.3s;
 }
 
 nav Li a:hover{
@@ -79,36 +105,18 @@ nav Li a:hover{
     float:right;
 }
 
-section{
-    text-align: center;
-   
-    padding-bottom: 5px;
-}
-
-section p{
-    color: gold;
-    text-align: center;
-    font-family: 'jo';
-    font-size: 4vw; 
-    margin-top: 5%;
-
-    
-}
-
 table{
- 
     color: gold;
-    
     padding-bottom: 6%;
     font-family: 'JON';
-    
-   margin-left: 15%;
+    margin: auto;
+    padding-top: 3vmax;
 }
 
 td, tr{
     padding: 30px;
     border: solid rgb(99, 75, 14);
-    vertical-align: top;
+
 }
 
 th{
@@ -118,27 +126,20 @@ th{
     border: solid rgb(99, 75, 14);
 }
 
-img{
-    width: 300PX;
+table img{
+    width: 10vw;
     height: auto;
     margin-left: 0%;
     transition: 0.5s;
     object-fit: cover;
-}
-
-img:hover{
-    transform: scale(2.5);
   
 }
 
-.pi1{
-    width: 70%;
-    background-image: url(piano.avif) ;
-    background-size:  135%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    padding: 15%;
+img:hover{
+    left: 50%;
+    transform: scale(250%);
 }
+
 
 footer{
     background-color: rgb(99, 75, 14);
@@ -168,4 +169,14 @@ footer a:hover{
 
 a:link{
     color: gold
+}
+
+@media (max-width: 687px) {
+    nav li a{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    
 }

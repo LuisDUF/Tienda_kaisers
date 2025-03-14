@@ -2,38 +2,50 @@
 
 
     const watches = [
-        {name:"Hamilton Jazzmaster", color:"Silver", cantidad: 4, precio: 24190, img: "rel1.jpg"},
-        {name:"Piano vertical",color: "Blanco", cantidad: 6, precio: 500000},
-        {name:"Piano electrónico", color: "Cafe", cantidad: 3, precio: 3000}
+        {name:"Hamilton Jazzmaster", color:"Silver", cantidad: 4, precio: 24190, img: "rel1.png"},
+        {name:"Day-Date 40",color: "Pink Gold", cantidad: 2, precio: 52800, img: "rel2.avif"},
+        {name:"Oyster Perpetual 36", color: "Cafe", cantidad: 3, precio: 7050, img: "rel3.avif"}
     ];
 
 window.onload = function listar_productos(){
     const tbody = document.getElementById("tabla-piano");
-    const body = document.getElementById("cuerpo");
 
-    watches.forEach(watche => {
+    let num = 0;
+
+    watches.forEach(watch => {
         let fila = document.createElement("tr");
-
-        fila.innerHTML = `
-        <td><img src="${watche.img}"></td>
-        <td>${watche.name}</td>
-        <td>${watche.cantidad}</td>
-        <td>${watche.precio}</td>
-        `;
-        tbody.appendChild(fila);
-
-
-        let cucu = document.createElement("div");
-
-        cucu.innerHTML = `
-        <p>${watche.name}</p>
-        `;
         
 
+        fila.innerHTML = `
+        <td><img src="${watch.img}"></td>
+        <td>${watch.name}</td>
+        <td id="can${num}">${watch.cantidad}</td>
+        <td>${watch.precio}</td>
+        <td>
+            <form onsubmit=" return comprar()" method="post">
+            <input type="number" value="0" id="GET${num}">
+            </form>
+        </td>
+        `;
+        tbody.appendChild(fila);
+        num++;
     })
+}
 
+function comprar() {
+    let total = 0;
+
+    for (let i = 0; i < 3; i++) {
+        if(document.getElementById("GET"+i).value > watches[i].cantidad){
+            alert("Ingrese una cantidad disponible"); 
+        }
+        else{
+            total += Number(document.getElementById("GET"+i).value);
+            watches[i].cantidad -=  Number(document.getElementById("GET"+i).value);
+            document.getElementById("can"+i).textContent = watches[i].cantidad;
+            document.getElementById("pe").textContent = total;
+        }
+        
+    }
     
-
-document.addEventListener("DOMContentLoaded", listar_pianos);
-
 }
