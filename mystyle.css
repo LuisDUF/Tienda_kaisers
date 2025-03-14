@@ -9,9 +9,10 @@
 
 header{
     text-align: center;
+    margin-bottom: 0;
     padding: 1%;
-    background-color: rgb(233, 198, 0);
-    color: rgb(67, 58, 6);;
+    background-color: rgba(248,191,184,255);
+    color: rgb(67, 58, 6);
     font-style: italic;
     font-size: 5vMAX;
     font-family: 'JO';
@@ -24,14 +25,14 @@ header{
 }
 
 body{
-    background-color: black;
+    background-color: rgb(252, 223, 220);
 }
 
 nav{
-    background-color: rgb(41, 40, 40);
     border-radius: 5px;
     font-size: 1vw;
     border-top: 0;
+    background-color: rgba(211,127,127,255);
 
 }
 
@@ -43,13 +44,10 @@ nav ul{
     border: solid rgb(67, 58, 6) 5px;
     border-top: 0;
     list-style-type: none;
-    
     margin: 0;
-   
     padding: 1vmax;
     padding-bottom: 0vmax;
     overflow: hidden;
-    background-color: rgb(99, 75, 14);
 }
 
 nav li{
@@ -66,10 +64,11 @@ nav li a{
    
     margin: auto;
     display: block;
-    color: gold;
+    color: rgb(67, 58, 6);
     text-align: center;
     padding: 16px;
-    
+    margin-top: 0;
+
     font-family: 'JON';
 }
 
@@ -89,14 +88,14 @@ nav li a{
 
 .menu:hover{
     color: rgb(0, 0, 0);
-    background-color: gold;
+    background-color: rgba(248,191,184,255);
     transform: scale(1.5);
     transition: 1.3s;
 }
 
 nav Li a:hover{
     color: rgb(0, 0, 0);
-    background-color: gold;
+    background-color: rgba(248,191,184,255);
     transform: scale(1.5);
     transition: 1.3s;
 }
@@ -105,18 +104,41 @@ nav Li a:hover{
     float:right;
 }
 
+#bot{
+    
+    position: fixed;
+    bottom: 50%; /* Ajusta la distancia desde la parte inferior */
+    right: 5%; /* Ajusta la distancia desde la derecha */
+    color: rgb(67, 58, 6);
+    background-color: rgba(248, 191, 184, 255);
+    border-radius: 100%;
+    padding: 1vw 2.4vw;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+
+}
+
 table{
-    color: gold;
+    color: rgb(67, 58, 6);
     padding-bottom: 6%;
     font-family: 'JON';
-    margin: auto;
+    margin-right: 20%;
+    margin-left: auto;
+
     padding-top: 3vmax;
 }
 
-td, tr{
-    padding: 30px;
-    border: solid rgb(99, 75, 14);
+input{
+    width: 20%;
+}
 
+td, tr{
+    padding: 2vw;
+    padding-bottom:0 ;
+    padding-top: 0%;
+    border: solid rgb(99, 75, 14);
+    text-align: center;
+    
 }
 
 th{
@@ -142,7 +164,7 @@ img:hover{
 
 
 footer{
-    background-color: rgb(99, 75, 14);
+    background-color: rgba(211,127,127,255);
     color: gold;
     padding: 30px;
     overflow: hidden;

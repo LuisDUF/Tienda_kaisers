@@ -34,16 +34,22 @@ window.onload = function listar_productos(){
 
 function comprar() {
     let total = 0;
+    let noMistakes = true;
+    for (let i = 0; i < 3; i++) {
+        if((document.getElementById("GET"+i).value) > watches[i].cantidad)
+           noMistakes = false;
+    }
 
     for (let i = 0; i < 3; i++) {
-        if(document.getElementById("GET"+i).value > watches[i].cantidad){
-            alert("Ingrese una cantidad disponible"); 
-        }
-        else{
-            total += Number(document.getElementById("GET"+i).value);
+        if(noMistakes){
+            total += Number(document.getElementById("GET"+i).value)*watches[i].precio;
             watches[i].cantidad -=  Number(document.getElementById("GET"+i).value);
             document.getElementById("can"+i).textContent = watches[i].cantidad;
             document.getElementById("pe").textContent = total;
+        }
+        else{
+            alert("Ingrese una cantidad disponible"); 
+            i=3;
         }
         
     }
