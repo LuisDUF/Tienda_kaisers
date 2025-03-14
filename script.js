@@ -21,7 +21,7 @@ window.onload = function listar_productos(){
         <td>${watch.name}</td>
         <td id="can${num}">${watch.cantidad}</td>
         <td>${watch.precio}</td>
-        <td>
+        <td id="tdd">
             <form onsubmit=" return comprar()" method="post">
             <input type="number" value="0" id="GET${num}">
             </form>
