@@ -45,7 +45,7 @@ function comprar() {
             total += Number(document.getElementById("GET"+i).value)*watches[i].precio;
             watches[i].cantidad -=  Number(document.getElementById("GET"+i).value);
             document.getElementById("can"+i).textContent = watches[i].cantidad;
-            document.getElementById("pe").textContent = total;
+            document.getElementById("pe").textContent = "Total: "+ total;
         }
         else{
             alert("Ingrese una cantidad disponible"); 

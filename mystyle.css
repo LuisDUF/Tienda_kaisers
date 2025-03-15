@@ -7,10 +7,12 @@
     src: url('JosefinSlab-VariableFont_wght.ttf') format('truetype');
 }
 
+
 header{
     text-align: center;
     margin-bottom: 0;
     padding: 1%;
+    margin-top: 0;
     background-color: rgba(248,191,184,255);
     color: rgb(67, 58, 6);
     font-style: italic;
@@ -26,6 +28,8 @@ header{
 
 body{
     background-color: rgb(252, 223, 220);
+    margin: 0;
+    padding: 0;
 }
 
 nav{
@@ -78,7 +82,7 @@ nav li a{
     margin: auto;
     padding-bottom: 0%;
     font-size: 3vmax;
-    color: gold;
+    color: rgb(67, 58, 6);
     text-align: center;
     padding: 16px;
     padding-bottom: 0%;
@@ -107,8 +111,8 @@ nav Li a:hover{
 #bot{
     
     position: fixed;
-    bottom: 50vmin; /* Ajusta la distancia desde la parte inferior */
-    right: auto; /* Ajusta la distancia desde la derecha */
+    bottom: 50vmin; 
+    right: auto;
     left: 83vw;
     color: rgb(67, 58, 6);
     background-color: rgba(248, 191, 184, 255);
@@ -116,29 +120,49 @@ nav Li a:hover{
     padding: 1vw 2.4vw;
     
     cursor: pointer;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000; 
 
 }
 
+#pe{
+    position: fixed;
+    bottom: 40vmin;
+    right: auto; 
+    left: 83vw;
+    color: rgb(67, 58, 6);
+    background-color: rgba(248, 191, 184, 255);
+    border-radius: 2vw / 3vw;
+    padding: 1vw 2.4vw;
+    z-index: 1000;
+}
+
+
 @media (max-width:701px){
 
-    #tdd{
-        padding: 0%;
-    }
+
     #tdd form input{
         width: 9vw;
     }
 
     #bot{
        position: static;
-        bottom: 19vw;
-        display: flex;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center;
-        margin: auto;
+        bottom: 25vw;
+        
+        justify-content: center;
+
+        
     }
 
-   
+    #pe{
+        position: static;
+        bottom: 25vw;
+        
+        justify-content: center; 
+        margin-right: 84%;
+        padding: 1vw;
+       
+
+    }
     
 
 }
@@ -147,7 +171,7 @@ table{
     color: rgb(67, 58, 6);
     padding-bottom: 6%;
     font-family: 'JON';
-    margin-right: 20%;
+    margin-right: 25%;
     margin-left: auto;
 
     padding-top: 3vmax;
@@ -189,33 +213,39 @@ img:hover{
 
 
 footer{
-    background-color: rgba(211,127,127,255);
-    color: gold;
-    padding: 30px;
-    overflow: hidden;
-    margin: 0;
+    color: rgb(67, 58, 6);
     border: solid rgb(67, 58, 6) 5px;
     border-radius: 5px;
+    background-color: rgba(211,127,127,255);
+    position: relative;
+    
+    bottom: 0;
+    left: 0;
+    width: auto;
+    padding: 10px;
+    text-align: center;
 }
 
 footer a{
     margin-left: 30px;
     text-decoration: none;
-    transition: 0.5s;
     border-radius: 10%;
+    
 }
 
 footer a:visited{
-    color: gold;
+    color: rgb(67, 58, 6);
 }
 
 footer a:hover{
-    background-color: gold;
+    background-color: rgba(248,191,184,255);
+    transition: 1.3s;
+    transform: scale(1.5);
     color:  rgb(99, 75, 14);;
 }
 
 a:link{
-    color: gold
+    color: rgb(67, 58, 6) 5px;;
 }
 
 @media (max-width: 687px) {
